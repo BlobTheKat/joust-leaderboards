@@ -1,7 +1,9 @@
 /*JOUST Leaderboard and Multiplayer Server
 Copyright thei5pro, adamreiner 2021*/
 //Subject to Apple App Store license
-const fs = require("fs")
+process.env.FIRE = process.env.FIRE || process.argv[2]
+process.env.KEY = process.env.KEY || process.argv[3]
+const fs = require("fs");
 const app = require('express')();
 const http = require("http").createServer(app);
 let io = require("socket.io")(http);
